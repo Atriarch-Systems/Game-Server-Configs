@@ -4,6 +4,7 @@ name: Github to Bitbucket sync
 on: push
 jobs:
   repo-sync:
+    if: github.repository_owner == 'GameServerManagers'
     runs-on: ubuntu-latest
     steps:
     - name: webfactory/ssh-agent
